@@ -1,0 +1,80 @@
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  font-size: 1.5em;
+}
+
+.title {
+  color: $black;
+  font-family: $family-headline;
+  font-weight: 800;
+}
+
+.subtitle {
+  color: $black;
+  font-family: $family-display;
+  font-weight: 700;
+}
+
+a {
+  color: $blurple;
+  font-weight: 500;
+  transition: color .2s ease-in-out;
+
+  @media print {
+    &[data-print] {
+      &::after {
+        content: " (" attr(data-print) ")";
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $dark-blurple;
+  }
+}
+
+.section {
+  max-width: 100vw;
+  padding: 5rem 1.5rem;
+
+  .title {
+    font-size: 3.25rem;
+  }
+
+  p {
+    + p {
+      margin: 1.5rem 0 0;
+    }
+  }
+
+  blockquote {
+    border-left: .3rem solid $blurple;
+    font-family: $family-display;
+    font-size: .95em;
+    font-weight: 700;
+    margin: 1.5rem 0;
+    padding: 0 0 0 1rem;
+  }
+}
+
+code {
+  background: $black;
+  border: .1em solid $blurple;
+  border-radius: .5em;
+  box-shadow: -.2em .2em $dark-blurple;
+  color: $blurple;
+  display: inline-block;
+  font-family: $family-display;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 0 .25em;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  padding: .25em .5em .1em;
+}

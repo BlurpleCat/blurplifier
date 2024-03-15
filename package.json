@@ -1,0 +1,26 @@
+{
+  "name": "blurple-web",
+  "version": "1.0.0",
+  "description": "Stats and information about Project Blurple",
+  "author": "Matt (IPv4) Cowley",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "analyze": "nuxi analyze",
+    "lint": "npm run lint:eslint",
+    "lint:fix": "npm run lint:eslint:fix",
+    "lint:eslint": "eslint --ignore-path .gitignore '**/*.@(js|vue)'",
+    "lint:eslint:fix": "npm run lint:eslint -- --fix"
+  },
+  "dependencies": {
+    "nuxt": "^3.4.3"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
+    "bulma": "^0.9.4",
+    "eslint": "^8.40.0",
+    "ordinal": "^1.0.3"
+  }
+}
